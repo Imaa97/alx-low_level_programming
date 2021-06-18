@@ -20,6 +20,8 @@ int main(void)
 	{
 	for (l = 48; l <= 57; l++)
 	{
+	if (((k + l) > (j + i) && k >= i) || i < k)
+	{
 	putchar(i);
 	putchar(j);
 	putchar(' ');
@@ -34,6 +36,7 @@ int main(void)
 	{
 	putchar(',');
 	putchar(' ');
+	}
 	}
 	}
 	}
