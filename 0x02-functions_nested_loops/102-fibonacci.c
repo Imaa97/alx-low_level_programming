@@ -5,34 +5,32 @@
  *@n: number of itemd to be printed
  *Description:  first n Fibonacci Numbers
  */
-void printFibonacciNumbers(int n)
+void printFibonacciNumbers()
 {
-	int f1 = 1, f2 = 2, i;
+	int a, b, c, i;
 
-	if
-	(n < 1)
-	return;
+	/* Fibonacci magic initialization */
+	a = 0;
+	b = 1;
+	c = 1;
 
-	printf("%d ", f1);
+	printf("Fibonacci terms: \n");
 
-	for (i = 1; i < n; i++)
+	/* Iterate through n terms */
+	for(i = 1; i <= 50; i++)
 	{
-	printf("%d ", f2);
+	printf("%d, ", c);
 
-	int next = f1 + f2;
-
-	f1 = f2;
-	f2 = next;
+	a = b;/* Copy n-1 to n-2*/
+	b = c;/* Copy current to n-1*/
+	c = a + b; /* New term*/
 	}
-}
-
+}	
 /**
- * main -  Driver Code, inputs the number of fibonaccin printed
- *Return: 0 always sucess
- * Description: prints out the number of items to the stdout
- */
-int main(void)
-{
-	printFibonacciNumbers(50);
-	return (0);
-}
+ * main - prints out the terms to be used
+ * Return: 0 is alway a success*/		
+	int main()
+	{
+	printFibonacciNumbers(50);	
+	return 0;
+	} 
