@@ -5,7 +5,7 @@
  *@n: number of itemd to be printed
  *Description:  first n Fibonacci Numbers
  */
-void printFibonacciNumbers(void)
+void printFibonacciNumbers(int n)
 {
 	long int a, b, c, i;
 
@@ -14,6 +14,8 @@ void printFibonacciNumbers(void)
 	b = 1;
 	c = 1;
 
+	if (n < 1)
+	return;
 	printf("Fibonacci terms: \n");
 
 	/* Iterate through n terms */
