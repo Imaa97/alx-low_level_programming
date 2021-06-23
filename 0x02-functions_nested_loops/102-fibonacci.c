@@ -1,39 +1,26 @@
 #include <stdio.h>
-
 /**
- * printFibonacciNumbers - funtion to print fibonacci numbers
- *@n: number of itemd to be printed
- *Description:  first n Fibonacci Numbers
- */
-void printFibonacciNumbers(int n)
+  * main - print the first 50 fibonacci numbers.
+  * Return: Nothing.
+  */
+int main(void)
 {
-	long int a, b, c, i;
+	unsigned long count, i, j, k;
 
-	/* Fibonacci initialization */
-	a = 0;
-	b = 1;
-	c = 1;
-
-	if (n < 1)
-	return;
-	printf("Fibonacci terms: \n");
-
-	/* Iterate through n terms */
-	for (i = 1; i <= 50; i++)
+	i = 0;
+	j = 1;
+	for (count = 0; count < 50; count++)
 	{
-	printf("%ld, ", c);
-
-	c = a + b;/* New Term*/
-	a = b;/* Copy n-1 to n2*/
-	b = c; /* Copy current to n-1*/
+		k = i + j;
+		i = j;
+		j = k;
+		printf("%lu", k);
+		if (count == 49)
+			putchar('\n');
+		else
+		{
+			printf(", ");
+		}
 	}
-}
-/**
- * main - prints out the terms to be used
- * Return: 0 is alway a success
- */
-	int main(void)
-	{
-	printFibonacciNumbers(50);
 	return (0);
-	}
+}
