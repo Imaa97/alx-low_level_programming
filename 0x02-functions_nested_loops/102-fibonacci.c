@@ -5,11 +5,11 @@
  *@n: number of itemd to be printed
  *Description:  first n Fibonacci Numbers
  */
-void printFibonacciNumbers()
+void printFibonacciNumbers(void)
 {
-	int a, b, c, i;
+	long int a, b, c, i;
 
-	/* Fibonacci magic initialization */
+	/* Fibonacci initialization */
 	a = 0;
 	b = 1;
 	c = 1;
@@ -17,20 +17,21 @@ void printFibonacciNumbers()
 	printf("Fibonacci terms: \n");
 
 	/* Iterate through n terms */
-	for(i = 1; i <= 50; i++)
+	for (i = 1; i <= 50; i++)
 	{
-	printf("%d, ", c);
+	printf("%ld, ", c);
 
-	a = b;/* Copy n-1 to n-2*/
-	b = c;/* Copy current to n-1*/
-	c = a + b; /* New term*/
+	c = a + b;/* New Term*/
+	a = b;/* Copy n-1 to n2*/
+	b = c; /* Copy current to n-1*/
 	}
-}	
+}
 /**
  * main - prints out the terms to be used
- * Return: 0 is alway a success*/		
-	int main()
+ * Return: 0 is alway a success
+ */
+	int main(void)
 	{
-	printFibonacciNumbers(50);	
-	return 0;
-	} 
+	printFibonacciNumbers(50);
+	return (0);
+	}
