@@ -2,7 +2,7 @@
 /**
  *_islower - function checks for lowercase charcters
  *
- * @c: a cahracter in ascii 
+ *@c: a character in ascii
  *Return: 1 if c is lowercase and otherwise 0
  */
 int _islower(int c)
@@ -17,6 +17,3 @@ int _islower(int c)
 	}
 	_putchar('\n');
 }
-
-			
-
