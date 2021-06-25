@@ -1,48 +1,35 @@
 #include <stdio.h>
-
 /**
-* main - Print combinations of two digit numbers
-*
-* Return: Always 0 (Success)
-*/
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int i;
+	int i; /*Decarling statement*/
 	int j;
-	int k;
-	int l;
 
-	for (i = 48; i <= 57; i++)
+	/*for 0-9 with ASCII*/
+	for (i = 0; i < 100 ; i++)
 	{
-	for (j = 48; j <= 57; j++)
+	for (j = i + 1 ; j < 100; j++)
 	{
-	for (k = 48; k <= 57; k++)
-	{
-	for (l = 48 + 1; l <= 57; l++)
-	{
-	if (((k + l) > (j + i) && k >= i) || i < k)
-	{
-	putchar(i);
-	putchar(j);
-	putchar(' ');
-	putchar(k);
-	putchar(l);
+	putchar (i / 10 + '0'); /*print  first nums, first digit*/
+	putchar (i % 10 + '0'); /*print  first nums, second digit*/
+	putchar (' '); /*print a space*/
+	putchar (j / 10 + '0'); /*print  sencond nums, first digit*/
+	putchar (j % 10 + '0'); /*print  second nums, second digit*/
+	/*break program if the condition is true (if is 98 99)*/
 
-	if (i + j + k + l == 227 && i == 57)
+	if (i == 98 && j == 99)
 	{
 	break;
 	}
-	else
-	{
-	putchar(',');
-	putchar(' ');
-	}
-	}
-	}
-	}
-	}
-	}
-	putchar('\n');
 
+	putchar(','); /*print (,)*/
+	putchar (' '); /*print a space*/
+	} /*end for #2*/
+	} /*end for #1*/
+	putchar('\n'); /*new line*/
 	return (0);
 }
