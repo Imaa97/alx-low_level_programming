@@ -24,9 +24,22 @@ char *_strncat(char *dest, char *src, int n)
 	 */
 	while (n--)
 	{
-		if (!(*dest++ = *src++))
+		/**
+		*All the code in the while function
+		* can be expressed as to get same answer
+		*if (!(*dest++ = *src))
+		*/
+		*dest = *src;
+
+		if (*dest == '\0')
 		{
-		return (start);
+			dest++;
+			src++;
+			return (start);
+		}
+		{
+		dest++;
+		src++;
 		}
 	}
 	/*Append null charcater to the last digit of dest string*/
