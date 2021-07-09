@@ -1,13 +1,4 @@
 #include "holberton.h"
-/**
- *
- *
- *
- *
- */
-char *_memset(char *s, char b, unsigned int n)
-{
-#include "holberton.h"
 
 /**
  * _memset - Fills the first n bytes of the memory area
@@ -20,22 +11,11 @@ char *_memset(char *s, char b, unsigned int n)
  */
 char *_memset(char *s, char b, unsigned int n)
 {
-	int i;
-	
-	while (n > 0)
-	{
-		s[i] = b;
-		i++;
-		n--;
-	
-	}
+	unsigned int index;
+
+
+	for (index = 0; index < n; index++)
+		s[index] = b;
 
 	return (s);
-}
-
-
-
-
-
-
 }
