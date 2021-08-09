@@ -5,6 +5,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include "main.h"
 /**
  * _strlen - finds the length of a string
  * @str: pointer to the string
